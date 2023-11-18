@@ -20,6 +20,8 @@ return {
       return opts
     end,
   },
+  { "folke/which-key.nvim", enabled = true },
+
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
@@ -73,5 +75,6 @@ return {
   --       b = { name = "Buffer" },
   --     }, { mode = "n", prefix = "<leader>" })
   --   end,
+  --   nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
   -- },
 }
