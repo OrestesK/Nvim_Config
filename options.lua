@@ -12,6 +12,11 @@ return {
     softtabstop = 4,
     smarttab = true,
     expandtab = true,
+
+    swapfile = false,
+
+    -- removes the "Press Key to Continue"
+    cmdheight=2
   },
   g = {
     mapleader = " ",                  -- sets vim.g.mapleader

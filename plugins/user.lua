@@ -9,19 +9,42 @@ return {
       vim.g.vimtex_view_method = 'zathura'
       vim.g.vimtex_mappings_enabled = 0
     end,
+  },
 
-    --   config = function(plugin, opts)
-    --     require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
-    --     -- add more custom luasnip configuration such as filetype extend or custom snippets
-    --     local luasnip = require "luasnip"
-    --     luasnip.filetype_extend("javascript", { "javascriptreact" })
-    --   end,
+  {
+    "themaxmarchuk/tailwindcss-colors.nvim",
+  },
+
+  {
+    'prisma/vim-prisma',
+    lazy = false
   },
 
   {
     'CRAG666/code_runner.nvim',
     lazy = false,
-    config = true
+    config = function()
+      require('code_runner').setup({
+        filetype = {
+          cs = {
+            "dotnet run"
+          },
+          java = {
+            "cd $dir &&",
+            "javac $fileName &&",
+            "java $fileNameWithoutExt"
+          },
+          python = "python3 -u",
+          typescript = "deno run",
+          rust = {
+            "cd $dir &&",
+            "rustc $fileName &&",
+            "$dir/$fileNameWithoutExt"
+          },
+        },
+      })
+    end,
+
   },
 
   {

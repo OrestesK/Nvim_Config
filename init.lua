@@ -45,6 +45,8 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+    }
   },
   -- Configure require("lazy").setup() options
   lazy = {
