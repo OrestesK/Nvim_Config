@@ -17,6 +17,8 @@ return {
 
     -- ["<leader>,"] = { name = "Latex" },
     ["<leader>r"] = { "<cmd>RunCode<CR>", desc = "Run Code" },
+
+    ["<leader>d."] = { "<cmd>DocGen<CR>", desc = "Generate Documentation" },
   },
   t = {
     -- setting a mapping to false will disable it

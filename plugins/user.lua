@@ -16,6 +16,11 @@ return {
   },
 
   {
+    "https://github.com/mg979/docgen.vim",
+    lazy = false,
+  },
+
+  {
     'prisma/vim-prisma',
     lazy = false
   },

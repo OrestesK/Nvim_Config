@@ -15,6 +15,8 @@ return {
 
     swapfile = false,
 
+    filetype = "on",
+
     -- removes the "Press Key to Continue"
     cmdheight=2
   },
