@@ -31,20 +31,13 @@ return {
         softtabstop = 4,
         smarttab = true,
         expandtab = true,
-        
+
         swapfile = false,
         filetype = "on",
         -- removes the "Press Key to Continue"
-        cmdheight=2
+        cmdheight = 2,
       },
       g = { -- vim.g.<key>
-        mapleader = " ",                  -- sets vim.g.mapleader
-        autoformat_enabled = true,        -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
-        cmp_enabled = true,               -- enable completion at start
-        autopairs_enabled = true,         -- enable autopairs at start
-        diagnostics_mode = 3,             -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
-        icons_enabled = true,             -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
-        ui_notifications_enabled = false, -- disable notifications when toggling UI elements
       },
     },
     mappings = {
@@ -53,7 +46,7 @@ return {
         ["<leader>j"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<leader>k"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
-        -- ["<leader>r"] = { "<cmd>RunCode<CR>", desc = "Run Code" },
+        ["<leader>r"] = { "<cmd>RunCode<CR>", desc = "Run Code" },
 
         -- ["<leader>d."] = { "<cmd>DocGen<CR>", desc = "Generate Documentation" },
 
