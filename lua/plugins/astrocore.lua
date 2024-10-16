@@ -22,9 +22,10 @@ return {
       opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
+        spell = true, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
+        -- autochdir = true,
 
         tabstop = 4,
         shiftwidth = 4,
@@ -32,11 +33,11 @@ return {
         smarttab = true,
         expandtab = true,
 
-        swapfile = false,
-        filetype = "on",
+        -- swapfile = false,
+        -- filetype = "on",
         -- removes the "Press Key to Continue"
-        cmdheight = 2,
-        laststatus = 3,
+        -- cmdheight = 2,
+        -- laststatus = 3,
       },
       g = { -- vim.g.<key>
       },
@@ -48,6 +49,17 @@ return {
         ["<leader>k"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         ["<leader>r"] = { "<cmd>RunCode<CR>", desc = "Run Code" },
+
+        ["<leader>lm"] = {
+          function()
+            local sm = require "supermaven-nvim.completion_preview"
+            sm.disable_inline_completion = not sm.disable_inline_completion
+            require "notify"(
+              ("Inline AI autocompletion " .. (sm.disable_inline_completion and "DISABLED" or "ENABLED"))
+            )
+          end,
+          desc = "Toggle Inline AI autocompletion",
+        },
 
         -- ["<leader>d."] = { "<cmd>DocGen<CR>", desc = "Generate Documentation" },
 

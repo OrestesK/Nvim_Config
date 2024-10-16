@@ -12,6 +12,16 @@ return {
     end,
   },
   {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
+  {
     "CRAG666/code_runner.nvim",
     lazy = false,
     config = function()
@@ -33,6 +43,24 @@ return {
             "$dir/$fileNameWithoutExt",
           },
         },
+      }
+    end,
+  },
+
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup {
+        color = {
+          suggestion_color = "#f38ba8",
+          cterm = 244,
+        },
+        log_level = "off", -- set to "off" to disable logging completely
+        -- disable_inline_completion = true, -- disables inline completion for use with cmp
+        -- disable_keymaps = true, -- disables built in keymaps for more manual control
+        -- keymaps = {
+        -- accept_suggestion = "<-f>",
+        -- },
       }
     end,
   },
