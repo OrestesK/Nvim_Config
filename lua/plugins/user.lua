@@ -2,7 +2,19 @@
 return {
   -- Theme
   "sainnhe/gruvbox-material",
-
+  {
+    "nvim-flutter/flutter-tools.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
+    },
+    config = true,
+  },
+  -- {
+  --   "thosakwe/vim-flutter",
+  --   lazy = false,
+  -- },
   {
     "lervag/vimtex",
     lazy = false,
@@ -46,7 +58,11 @@ return {
       }
     end,
   },
-
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
   {
     "supermaven-inc/supermaven-nvim",
     config = function()
