@@ -33,7 +33,7 @@ return {
         smarttab = true,
         expandtab = true,
 
-        -- swapfile = false,
+        swapfile = false,
         -- filetype = "on",
         -- removes the "Press Key to Continue"
         -- cmdheight = 2,
@@ -45,8 +45,8 @@ return {
     mappings = {
       n = {
         -- navigate buffer tabs
-        ["<leader>j"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["<leader>k"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["<leader>k"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["<leader>j"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         ["<leader>r"] = { "<cmd>RunCode<CR>", desc = "Run Code" },
 

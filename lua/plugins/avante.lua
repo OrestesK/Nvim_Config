@@ -12,13 +12,12 @@ return {
 
     ---@type AvanteAzureProvider
     azure = {
-      endpoint = "https://okassian-completions.openai.azure.com/", -- example: "https://<your-resource-name>.openai.azure.com"
-      deployment = "gpt-4o-mini", -- Azure deployment name (e.g., "gpt-4o", "my-gpt-4o-deployment")
+      endpoint = "https://okassian-completions.openai.azure.com/",
+      deployment = "gpt-4o-mini",
       api_version = "2024-06-01",
-      timeout = 30000, -- Timeout in milliseconds
+      timeout = 30000,
       temperature = 0,
       max_tokens = 4096,
-      ["local"] = false,
     },
     behaviour = {
       auto_suggestions = false, -- Experimental stage
@@ -26,6 +25,7 @@ return {
       auto_set_keymaps = true,
       auto_apply_diff_after_generation = true,
       support_paste_from_clipboard = false,
+      minimize_diff = true,
     },
     mappings = {
       --- @class AvanteConflictMappings

@@ -11,10 +11,26 @@ return {
     },
     config = true,
   },
-  -- {
-  --   "thosakwe/vim-flutter",
-  --   lazy = false,
-  -- },
+  {
+    "themaxmarchuk/tailwindcss-colors.nvim",
+    lazy = false,
+    config = function() require("tailwindcss-colors").setup {} end,
+  },
+  {
+    "linux-cultist/venv-selector.nvim",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "mfussenegger/nvim-dap",
+      "mfussenegger/nvim-dap-python", --optional
+      { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+    },
+    lazy = false,
+    branch = "regexp",
+    config = function() require("venv-selector").setup() end,
+    keys = {
+      { ",v", "<cmd>VenvSelect<cr>" },
+    },
+  },
   {
     "lervag/vimtex",
     lazy = false,
