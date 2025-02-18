@@ -37,7 +37,7 @@ return {
         -- filetype = "on",
         -- removes the "Press Key to Continue"
         -- cmdheight = 2,
-        -- laststatus = 3,
+        laststatus = 3,
       },
       g = { -- vim.g.<key>
       },
